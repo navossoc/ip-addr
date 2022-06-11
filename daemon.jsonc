@@ -1,0 +1,7 @@
+// /etc/docker/daemon.json
+{
+    "ipv6": true,
+    "fixed-cidr-v6": "fd12:368b:d732:f473::/64",
+    "experimental": true,
+    "ip6tables": true
+}

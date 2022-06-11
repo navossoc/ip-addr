@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  ip-addr:
+    container_name: ip-addr
+    image: navossoc/ip-addr
+    restart: unless-stopped
+    build:
+      context: .
+    #network_mode: host
+    networks:
+      - mycustom
+    ports:
+      - 80:80
+
+networks:
+  mycustom:
+    enable_ipv6: true
+    ipam:
+      config:
+        - subnet: fd89:d428:16fc:c57f::/64
